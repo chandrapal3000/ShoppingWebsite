@@ -1,0 +1,83 @@
+
+.header {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    width: 100%;
+    /* display: flex;
+    flex-direction: row; */
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "home cart logo account search";
+    align-items: center;    
+    justify-items: center;
+    box-shadow: 0 0 25px 0 black;
+}
+.imgDiv{
+    /* border: 1px solid black; */
+    /* width: 20%; */
+    /* margin-left: 1%;
+    margin-right: 1%; */
+}
+.imgDiv img {
+    max-height: 70px;
+    max-width: 100%;
+    min-width: 70px;
+    object-fit: cover;
+    /* border: 1px solid black; */
+}
+.home{
+    grid-area: home;
+}
+.cart{
+    grid-area: cart;
+    /* border: 1px solid black; */
+    position: relative;
+
+}
+.logo{
+    grid-area: logo;
+    pointer-events: none;
+}
+.account{
+    grid-area: account;
+}
+.search{
+    grid-area: search;
+}
+.search img{
+    /* height: 60px; */
+}
+.cartItemsIndicator{
+    position: absolute; 
+    /* display: fixed; */
+    top: 0;
+    right: 0;
+    
+}
+.cartItemsIndicatorSub{
+    background-color: blueviolet;
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    width: 15px;
+    height: 15px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+.bugFix{
+    margin-top: 50px;
+}
+.MovingBall{
+    border: 1px solid black;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}

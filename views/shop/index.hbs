@@ -1,0 +1,25 @@
+    <link rel='stylesheet' href='/stylesheets/shopStyles.css' />
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+       {{!-- <div class="bugFix"></div> --}}
+       {{# each products}}
+       
+       <div class="container">
+    <div class="rate">
+        <i class="fa-solid fa-star"></i> {{this.rating.rate}} ({{this.rating.count}})
+    </div>
+    <div class="count">
+       <span class="bold">₹</span>{{this.price}}
+    </div>
+        <div class="image">
+       <img src="{{this.image}}" alt="an image"/>
+    </div>
+    <div class="title">{{this.title}}</div>
+    <div class="price"><span class="bold">Cost : </span>{{this.price}}₹</div>
+    <div class="description">{{this.description}}</div>
+    <div class="catagory"><span class="bold">Catagory : </span>{{this.category}}</div>
+    <div class="addToCart"><a href="http://localhost:3000/cart/add/{{this.id}}">Add To Cart</a></div>
+</div>
+       {{/ each }}
+<div style="clear: both;"></div>
+<div class="Footer"><span class="bold">Designed by Chandrapal Singh@chandrapal.gq</span></div>
+
