@@ -1,0 +1,64 @@
+    <link rel='stylesheet' href='/stylesheets/shopStyles.css' />
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+       {{!-- <div class="bugFix"></div> --}}
+       {{#if cartHasItems}}
+       <div class="proceedToBuyContainer">
+        <div class="proceedToBuySubContainer">
+{{# each cartItems.items}}
+        <div class="listOfCartItems">
+            <div class="listOfCartItemsTitle"><span class="bold">{{this.item.title}} ({{this.qty}} item)</span></div>
+            <div class="listOfCartItemsPrice"><span class="bold">{{this.item.price}}₹</span></div>
+        </div>
+{{/each}}
+<div class="hrLine"></div>
+<div class="listOfCartItems">
+            <div class="listOfCartItemsTitle"><span class="bold">Total {{cartItems.totalQty}} item</span></div>
+            <div class="listOfCartItemsPrice"><span class="bold">{{cartItems.totalPrice}}₹</span></div>
+        </div>
+</div>
+<div class="listOfCartItems">
+            <div class="listOfCartItemsTitle">
+
+        <div class="emptyCartAllItems"><a href="http://localhost:3000/cart/remove/yes">Empty Cart</a></div>
+        </div>
+            <div class="listOfCartItemsPrice">
+
+        <div class="proceedToBuy"><a href="#">Proceed To Buy {{cartItems.totalQty}} Item</a></div>
+        </div>
+
+        </div>
+        </div>
+       {{# each cartItems.items}}
+       
+       <div class="container">
+    <div class="rate">
+        <i class="fa-solid fa-star"></i> {{this.item.rating.rate}} ({{this.item.rating.count}})
+    </div>
+    <div class="count">
+       <span class="bold">₹</span>{{this.price}}({{this.qty}}) Item
+    </div>
+        <div class="image">
+       <img src="{{this.item.image}}" alt="an image"/>
+    </div>
+    <div class="title">{{this.item.title}}</div>
+    <div class="price"><span class="bold">Total Cost : </span>{{this.price}}₹</div>
+    <div class="description">{{this.item.description}}</div>
+    <div class="catagory"><span class="bold">Catagory : </span>{{this.item.category}}</div>
+    <div class="addToCart"><a href="#">You Added {{this.qty}} of these</a></div>
+</div>
+       {{/ each }}
+       {{/if}}
+       {{#if cartEmpty}}
+
+       <div class="goToShoppingPageContainer">
+<div class="cartEmptyImage"><img src="https://shop.millenniumbooksource.com/static/images/cart1.png"/></div>
+
+        {{!-- <div>Ohh! Looks like cart is empty</div> --}}
+        <div class="goToShoppingPage"><a href="http://localhost:3000/">Go To Shopping Page</a></div>
+
+        </div>
+
+       {{/if}}
+<div style="clear: both;"></div>
+{{!-- <div class="Footer"><span class="bold">Designed by Chandrapal Singh@chandrapal.gq</span></div> --}}
+
