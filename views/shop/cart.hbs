@@ -16,15 +16,18 @@
             <div class="listOfCartItemsPrice"><span class="bold">{{cartItems.totalPrice}}₹</span></div>
         </div>
 </div>
-<div class="listOfCartItems">
-            <div class="listOfCartItemsTitle">
+<div class="threeButtonsContainer">
+            {{!-- <div class="listOfCartItemsTitle"> --}}
+        <div class="emptyCartAllItems"><a href="/">Go back</a></div>
+
 
         <div class="emptyCartAllItems"><a href="/cart/remove/yes">Empty Cart</a></div>
-        </div>
-            <div class="listOfCartItemsPrice">
+        {{!-- </div> --}}
+
+            {{!-- <div class="listOfCartItemsPrice"> --}}
 
         <div class="proceedToBuy"><a href="#">Proceed To Buy {{cartItems.totalQty}} Item</a></div>
-        </div>
+        {{!-- </div> --}}
 
         </div>
         </div>

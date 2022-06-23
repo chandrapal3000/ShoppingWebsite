@@ -111,6 +111,10 @@
   justify-items: center;
   /* border: 1px solid black; */
 }
+.threeButtonsContainer{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
 .proceedToBuySubContainer{
   width: 100%;
   border: 1px solid black;
